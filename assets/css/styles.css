@@ -59,6 +59,10 @@
   margin: 0;
 }
 
+body, html {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -68,6 +72,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -88,6 +93,12 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+
+
+
+
+
 
 /* THEME */
 
@@ -189,6 +200,10 @@ img {
   font-weight: var(--font-semi-bold);
   color: var(--title-color);
   margin-left: 1rem;
+}
+
+.nav__menu {
+  overflow-x: hidden;
 }
 
 .nav__logo-circle,
