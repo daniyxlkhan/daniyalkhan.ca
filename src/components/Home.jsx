@@ -15,7 +15,7 @@ const Home = () => {
         </h1>
 
         <div className="home__social">
-          <a href="https://github.com/Javantax" target="_blank" rel="noopener noreferrer" className="home__social-link">
+          <a href="https://github.com/daniyxlkhan" target="_blank" rel="noopener noreferrer" className="home__social-link">
             <i className="ri-github-line"></i>
           </a>
           <a href="https://www.linkedin.com/in/daniyxl-khan" target="_blank" rel="noopener noreferrer" className="home__social-link">
@@ -38,7 +38,6 @@ const Home = () => {
             <div className="home__scroll-box">
               <i className="ri-arrow-down-s-line"></i>
             </div>
-            <span className="home_scroll-text"></span>
           </a>
         </div>
       </div>
