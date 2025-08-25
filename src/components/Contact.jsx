@@ -19,14 +19,33 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setMessage('Message sent successfully!');
-    setFormData({
-      user_name: '',
-      user_email: '',
-      user_subject: '',
-      user_message: ''
-    });
+    
+    // EmailJS integration - replace with your service details
+    if (window.emailjs) {
+      window.emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', '#contact-form', 'YOUR_USER_ID')
+        .then(() => {
+          setMessage('Message sent successfully ✅');
+          setTimeout(() => setMessage(''), 5000);
+          setFormData({
+            user_name: '',
+            user_email: '',
+            user_subject: '',
+            user_message: ''
+          });
+        })
+        .catch(() => {
+          setMessage('Message not sent ❌');
+        });
+    } else {
+      console.log('Form submitted:', formData);
+      setMessage('Message sent successfully!');
+      setFormData({
+        user_name: '',
+        user_email: '',
+        user_subject: '',
+        user_message: ''
+      });
+    }
   };
 
   return (

@@ -12,13 +12,13 @@ const Footer = () => {
       <div className="footer__container container grid">
         <ul className="footer__links">
           <li>
-            <a href="#home" className="footer__links" onClick={(e) => handleLinkClick('home', e)}>Home</a>
+            <a href="#home" className="footer__link" onClick={(e) => handleLinkClick('home', e)}>Home</a>
           </li>
           <li>
-            <a href="#projects" className="footer__links" onClick={(e) => handleLinkClick('projects', e)}>Projects</a>
+            <a href="#projects" className="footer__link" onClick={(e) => handleLinkClick('projects', e)}>Projects</a>
           </li>
           <li>
-            <a href="#contact" className="footer__links" onClick={(e) => handleLinkClick('contact', e)}>Contact</a>
+            <a href="#contact" className="footer__link" onClick={(e) => handleLinkClick('contact', e)}>Contact</a>
           </li>
         </ul>
 

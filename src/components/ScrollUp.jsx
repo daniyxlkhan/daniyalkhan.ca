@@ -6,7 +6,7 @@ const ScrollUp = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      if (window.pageYOffset >= 350) {
         setIsVisible(true);
       } else {
         setIsVisible(false);

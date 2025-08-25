@@ -1,6 +1,6 @@
 /* PROJECTS */
 .projects{
-  background-color: var(--dark-container-color);
+  background-color: var(--body-color);
   transition: background-color .4s;
 }
 

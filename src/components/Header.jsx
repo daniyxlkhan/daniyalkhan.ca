@@ -1,9 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('home');
+  const [shadowHeader, setShadowHeader] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Shadow header
+      setShadowHeader(window.scrollY >= 50);
+      
+      // Update active link based on scroll position
+      const sections = document.querySelectorAll('section[id]');
+      const scrollDown = window.scrollY;
+
+      sections.forEach((current) => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 58;
+        const sectionId = current.getAttribute('id');
+
+        if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+          setActiveLink(sectionId);
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -26,7 +51,7 @@ const Header = () => {
   };
 
   return (
-    <header className="header" id="header">
+    <header className={`header ${shadowHeader ? 'shadow-header' : ''}`} id="header">
       <div className="nav container">
         <a 
           href="#" 

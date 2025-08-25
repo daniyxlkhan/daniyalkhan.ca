@@ -75,7 +75,7 @@
 
 .contact__input,
 .contact__button {
-  font-family: var(--body-color);
+  font-family: var(--body-font);
   font-size: var(--normal-font-size);
   outline: none;
   border: none;
