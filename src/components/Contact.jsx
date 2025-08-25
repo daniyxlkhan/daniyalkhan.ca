@@ -155,7 +155,7 @@ const Contact = () => {
           </div>
 
           <div className="contact__social-links">
-            <a href="https://github.com/Javantax" target="_blank" rel="noopener noreferrer" className="contact__social-link">
+            <a href="https://github.com/daniyxlkhan" target="_blank" rel="noopener noreferrer" className="contact__social-link">
               <i className="ri-github-line"></i>
             </a>
 
