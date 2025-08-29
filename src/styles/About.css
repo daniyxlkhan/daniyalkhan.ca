@@ -11,14 +11,14 @@
 .about__perfil {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   margin-block: 2.5rem auto;
 }
 
 .about__image-container {
   position: relative;
-  width: 220px;
+  width: 620px;
   margin-bottom: 1rem;
 }
 
@@ -101,8 +101,6 @@
 
 .about__buttons {
   display: flex;
-  justify-content: center;
-  align-items: center;
   column-gap: 1rem;
 }
 

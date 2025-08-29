@@ -14,7 +14,7 @@ const Home = () => {
           Daniyal Khan
         </h1>
 
-        <div className="home__social">
+        {/* <div className="home__social">
           <a href="https://github.com/daniyxlkhan" target="_blank" rel="noopener noreferrer" className="home__social-link">
             <i className="ri-github-line"></i>
           </a>
@@ -24,7 +24,7 @@ const Home = () => {
           <a href="https://twitter.com/daniyxl_khan" target="_blank" rel="noopener noreferrer" className="home__social-link">
             <i className="ri-twitter-line"></i>
           </a>
-        </div>
+        </div> */}
 
         <div className="home__info">
           <p className="home__description">
