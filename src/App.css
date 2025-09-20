@@ -20,7 +20,7 @@
 
   /* Font and typography */
   --body-font: "Bai Jamjuree", sans-serif;
-  --display-font: "ByteBounce", monospace;
+  --display-font: "ByteBounce", "Courier New", "Monaco", monospace;
   --biggest-font-size: 2.5rem;
   --h1-font-size: 1.75rem;
   --h2-font-size: 1.25rem;
@@ -41,15 +41,13 @@
   --z-fixed: 100;
 }
 
-/* Load ByteBounce font */
+/* Load ByteBounce font with preload */
 @font-face {
   font-family: 'ByteBounce';
-  src: url('/assets/fonts/ByteBounce.woff2') format('woff2'),
-       url('/assets/fonts/ByteBounce.woff') format('woff'),
-       url('/assets/fonts/ByteBounce.ttf') format('truetype');
+  src: url('/assets/fonts/ByteBounce.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block; /* Prevent font swap flash */
 }
 
 /* Responsive typography */

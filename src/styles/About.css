@@ -18,7 +18,7 @@
 
 .about__image-container {
   position: relative;
-  width: 620px;
+  width: 720px;
   margin-bottom: 1rem;
 }
 
@@ -74,14 +74,17 @@
 
 .about__info {
   padding-left: 1.25rem;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
 }
 
 .about__description {
   margin-top: 1rem;
   position: relative;
   color: var(--title-color);
-  margin-bottom: 1.5rem;
-  padding-left: 2rem;
+  margin-bottom: 2rem;
+  padding-right: 2rem;
 }
 
 .about__description::after {
@@ -105,11 +108,104 @@
   column-gap: 1rem;
 }
 
-/* Medium devices */
-@media screen and (min-width: 576px) {
+/* Mobile devices - Stack image on top, text below */
+@media screen and (max-width: 768px) {
+  .about__perfil {
+    flex-direction: column;
+    align-items: center;
+    margin-block: 1.5rem auto;
+  }
+  
+  .about__image-container {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 2rem;
+    order: -1;
+  }
+  
+  .about__info {
+    padding-left: 0;
+    padding: 0 1rem;
+    width: 100%;
+    order: 1;
+    text-align: center;
+  }
+  
+  .about__description {
+    padding-right: 0;
+    text-align: left;
+    font-size: 1rem;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .about__description::after {
+    display: none;
+  }
+  
+  .about__buttons {
+    justify-content: center;
+    margin-top: 0.5rem;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  
+  .button, .button__ghost {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+  }
+}
+
+/* Extra small mobile devices */
+@media screen and (max-width: 480px) {
+  .about__image-container {
+    max-width: 200px;
+  }
+  
+  .about__description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+/* Medium devices - Large tablets and small desktops */
+@media screen and (min-width: 769px) {
   .about__container{
     grid-template-columns: 350px;
     justify-content: center;
+  }
+  
+  .about__perfil {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .about__image-container {
+    width: 720px;
+    order: initial;
+  }
+  
+  .about__info {
+    padding-left: 1.25rem;
+    text-align: left;
+    order: initial;
+  }
+  
+  .about__description {
+    padding-right: 2rem;
+    max-width: none;
+  }
+  
+  .about__description::after {
+    display: block; 
+  }
+  
+  .about__buttons {
+    flex-direction: row;
+    justify-content: flex-start;
   }
 }
 

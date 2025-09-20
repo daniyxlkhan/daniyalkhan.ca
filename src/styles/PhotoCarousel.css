@@ -13,16 +13,16 @@
   gap: 20px;
   padding: 20px 0;
   align-items: center;
-  animation: scroll-infinite 30s linear infinite;
-  width: calc(200% + 40px); 
+  animation: seamless-scroll 30s linear infinite;
+  width: fit-content;
 }
 
-@keyframes scroll-infinite {
+@keyframes seamless-scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); /* Move exactly half way, then seamlessly restart */
+    transform: translateX(calc(-50% - 10px));
   }
 }
 

@@ -31,7 +31,6 @@ const Home = () => {
       <div className="home__container container">
         <h1 className="home__name">
           {displayText}
-          <span className="typing-cursor">|</span>
         </h1>
 
         {/* <div className="home__social">

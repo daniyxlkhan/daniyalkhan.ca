@@ -16,22 +16,17 @@ const About = () => {
         </h2>
 
         <div className="about__perfil">
-
-          <div className="about__image-container">
-            <img src="/assets/img/me-in-center-canada.jpg" alt="image" className="about__img" />
-            <div className="about__shadow"></div>
-            <div className="geometric-box"></div>
-            <img src="/assets/img/random-lines.svg" alt="" className="about__line" />
-            <div className="about__box"></div>
-          </div>
-
           <div className="about__info">
             <p className="about__description">
-              Software development started as something I was curious about, but the more I built, the more I realized it’s what I want to spend my career doing. 
+              Software development started as something I was curious about, but the more I built, the more I realized it's what I want to spend my career doing. 
               I love solving problems, breaking things down into clean solutions, and constantly finding better ways to build. 
               <br></br><br></br>
-              When I’m not coding, I’m usually outdoors hiking, climbing, running, or exploring trails with my camera in hand. I enjoy chasing good views as much as I enjoy chasing good ideas.
-              At the end of the day, I just love learning and pushing myself, whether it’s in tech or out in the mountains.
+              When I'm not coding, I'm usually outdoors hiking, climbing, running, or exploring trails with my camera in hand.
+              I have a passion for photography and love capturing moments whether it's landscapes, cityscapes, or candid shots of friends.
+              I enjoy chasing good views as much as I enjoy chasing good ideas. 
+              At the end of the day, I just love learning and pushing myself, whether it's in tech or out on an adventure.
+              <br></br><br></br>
+              
             </p>
 
             <div className="about__buttons">
@@ -43,6 +38,14 @@ const About = () => {
                 <i className="ri-linkedin-box-line"></i>
               </a>
             </div>
+          </div>
+
+          <div className="about__image-container">
+            <img src="/assets/img/me-in-center-canada.jpg" alt="image" className="about__img" />
+            <div className="about__shadow"></div>
+            <div className="geometric-box"></div>
+            <img src="/assets/img/random-lines.svg" alt="" className="about__line" />
+            <div className="about__box"></div>
           </div>
         </div>
         

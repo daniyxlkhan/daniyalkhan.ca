@@ -10,7 +10,13 @@ const PhotoCarousel = () => {
     '/assets/img/me-with-emily.jpeg',
     '/assets/img/me-with-bunthong.jpeg',
     '/assets/img/me-cycle-CN-tower.jpeg',
+    '/assets/img/me-in-goofy-polaroid.jpeg',
+    '/assets/img/me-in-quebec-hike.jpeg',
+    '/assets/img/me-mountains.jpeg',
+    '/assets/img/me-on-quebec-city-trip.jpeg',
     '/assets/img/me-in-street-snowy.jpeg',
+    '/assets/img/me-bbq-friends.jpeg',
+    '/assets/img/me-canada-day.jpeg',
     '/assets/img/me-with-dog-liz.png',
     '/assets/img/me-in-quebec.jpg',
   ];
