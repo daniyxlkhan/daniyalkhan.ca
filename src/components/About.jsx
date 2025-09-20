@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/About.css';
+import PhotoCarousel from './PhotoCarousel';
 
 const About = () => {
   const handleContactClick = (e) => {
@@ -15,22 +16,23 @@ const About = () => {
         </h2>
 
         <div className="about__perfil">
+
+          <div className="about__image-container">
+            <img src="/assets/img/me-in-center-canada.jpg" alt="image" className="about__img" />
+            <div className="about__shadow"></div>
+            <div className="geometric-box"></div>
+            <img src="/assets/img/random-lines.svg" alt="" className="about__line" />
+            <div className="about__box"></div>
+          </div>
+
           <div className="about__info">
             <p className="about__description">
               Software development started as something I was curious about, but the more I built, the more I realized it’s what I want to spend my career doing. 
               I love solving problems, breaking things down into clean solutions, and constantly finding better ways to build. 
               <br></br><br></br>
-              Right now I’m diving deeper into backend systems, and the craft of designing software that actually scales and works in the real world.
-              <br></br><br></br>
               When I’m not coding, I’m usually outdoors hiking, climbing, running, or exploring trails with my camera in hand. I enjoy chasing good views as much as I enjoy chasing good ideas.
               At the end of the day, I just love learning and pushing myself, whether it’s in tech or out in the mountains.
             </p>
-            {/* <ul className="about__list">
-              <li className="about__item">
-                <b>My Skills Are:</b> Java, Python, C, SQLite, JavaScript, HTML, CSS, Flask & Bootstrap
-              </li>
-            </ul> */}
-            
 
             <div className="about__buttons">
               <a href="#contact" className="button" onClick={handleContactClick}>
@@ -42,15 +44,9 @@ const About = () => {
               </a>
             </div>
           </div>
-
-          <div className="about__image-container">
-            <img src="/assets/img/AboutPage.jpeg" alt="image" className="about__img" />
-            <div className="about__shadow"></div>
-            <div className="geometric-box"></div>
-            <img src="/assets/img/random-lines.svg" alt="" className="about__line" />
-            <div className="about__box"></div>
-          </div>
         </div>
+        
+        <PhotoCarousel />
       </div>
     </section>
   );

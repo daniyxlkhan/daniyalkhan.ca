@@ -1,0 +1,66 @@
+.photo-carousel {
+  width: 100%;
+  height: 140px;
+  background: transparent;
+  overflow: hidden;
+  position: relative;
+  margin-top: 3rem;
+}
+
+.photo-carousel__container {
+  display: flex;
+  height: 100%;
+  gap: 20px;
+  padding: 20px 0;
+  align-items: center;
+  animation: scroll-circular 30s linear infinite;
+  width: calc(200% + 40px); 
+}
+
+@keyframes scroll-circular {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.photo-carousel__item {
+  flex-shrink: 0;
+  width: 180px;
+  height: 100px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.photo-carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Subtle fade edges that blend with background */
+.photo-carousel::before,
+.photo-carousel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.photo-carousel::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--container-color) 0%, transparent 100%);
+}
+
+.photo-carousel::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--container-color) 0%, transparent 100%);
+}
+

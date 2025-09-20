@@ -81,6 +81,7 @@
   position: relative;
   color: var(--title-color);
   margin-bottom: 1.5rem;
+  padding-left: 2rem;
 }
 
 .about__description::after {
