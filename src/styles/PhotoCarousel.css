@@ -13,16 +13,16 @@
   gap: 20px;
   padding: 20px 0;
   align-items: center;
-  animation: scroll-circular 30s linear infinite;
+  animation: scroll-infinite 30s linear infinite;
   width: calc(200% + 40px); 
 }
 
-@keyframes scroll-circular {
+@keyframes scroll-infinite {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Move exactly half way, then seamlessly restart */
   }
 }
 
@@ -63,4 +63,3 @@
   right: 0;
   background: linear-gradient(270deg, var(--container-color) 0%, transparent 100%);
 }
-

@@ -4,8 +4,29 @@
 }
 
 .home__name{
+  font-family: var(--display-font);
   font-size: var(--biggest-font-size);
   text-align: center;
+  letter-spacing: 2px;
+  font-weight: normal;
+  text-shadow: 0 0 10px rgba(255, 72, 72, 0.3);
+  padding-bottom: 2rem;
+}
+
+.typing-cursor {
+  color: var(--first-color);
+  animation: blink 1s infinite;
+  font-weight: normal;
+  font-family: var(--display-font);
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
 }
 
 .home__social {
@@ -118,7 +139,11 @@
 
 /* Large devices */
 @media screen and (min-width: 1150px){
-  .home__name,
+  .home__name{
+    font-size: calc(var(--biggest-font-size) * 1.2);
+    letter-spacing: 3px;
+  }
+  
   .home__description{
     text-align: center;
   }

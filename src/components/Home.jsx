@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Home.css';
 
 const Home = () => {
+  const [displayText, setDisplayText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+  
+  const fullText = "Hello, my name is Daniyal.";
+
+  useEffect(() => {
+    if (currentIndex < fullText.length && isTyping) {
+      const timeout = setTimeout(() => {
+        setDisplayText(prev => prev + fullText[currentIndex]);
+        setCurrentIndex(prev => prev + 1);
+      }, 100); // Typing speed 
+
+      return () => clearTimeout(timeout);
+    } else if (currentIndex === fullText.length) {
+      setIsTyping(false);
+    }
+  }, [currentIndex, isTyping, fullText]);
+
   const handleScrollClick = (e) => {
     e.preventDefault();
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
@@ -9,9 +28,10 @@ const Home = () => {
 
   return (
     <section className="home section" id="home">
-      <div className="home__container container grid">
+      <div className="home__container container">
         <h1 className="home__name">
-          Daniyal Khan
+          {displayText}
+          <span className="typing-cursor">|</span>
         </h1>
 
         {/* <div className="home__social">
@@ -28,11 +48,7 @@ const Home = () => {
 
         <div className="home__info">
           <p className="home__description">
-            <b>Student Developer</b>
-            architecting dreams in <br /> the realm of code, where algorithms dance and
-            pixels breathe. Crafting a symphony of logic and
-            creativity, I navigate the digital cosmos with   
-            lines of elegance and bytes of imagination.
+            <b>I like to code.</b> 
           </p>
           <a href="#about" className="home__scroll" onClick={handleScrollClick}>
             <div className="home__scroll-box">

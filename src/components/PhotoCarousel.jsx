@@ -18,8 +18,19 @@ const PhotoCarousel = () => {
   return (
     <div className="photo-carousel">
       <div className="photo-carousel__container">
-        {[...photos].map((photo, index) => (
-          <div key={index} className="photo-carousel__item">
+        {/* First set of photos */}
+        {photos.map((photo, index) => (
+          <div key={`first-${index}`} className="photo-carousel__item">
+            <img
+              src={photo}
+              alt={`Photo ${index + 1}`}
+              className="photo-carousel__image"
+              loading="lazy"
+            />
+          </div>
+        ))}
+        {photos.map((photo, index) => (
+          <div key={`second-${index}`} className="photo-carousel__item">
             <img
               src={photo}
               alt={`Photo ${index + 1}`}
