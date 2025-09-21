@@ -2,10 +2,16 @@
 .projects{
   background-color: var(--body-color);
   transition: background-color .4s;
+  padding-block: 4rem 4rem;
 }
 
 .projects__container{
   row-gap: 2rem;
+}
+
+/* Make the title bigger on mobile */
+.projects .section__title-1 {
+  font-size: var(--h1-font-size);
 }
 
 .projects__card{
@@ -88,6 +94,10 @@
   background-color: var(--container-color);
 }
 
+.projects .section__title-1 {
+  font-size: calc(var(--h1-font-size) * 1.2); 
+}
+
 /* Medium devices */
 @media screen and (min-width: 576px) {
   .projects__container{
@@ -110,6 +120,14 @@
 
 /* Large devices */
 @media screen and (min-width: 1150px){
+  .projects .section__title-1 {
+    font-size: var(--h1-font-size); 
+  }
+  
+  .projects {
+    padding-block: 4rem 6rem;
+  }
+
   .projects__container{
     grid-template-columns: repeat(3, 352px);
     padding-block: 3rem 1rem;

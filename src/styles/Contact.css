@@ -1,6 +1,6 @@
 /* CONTACT */
 .contact {
-  padding-bottom: 0;
+  padding-bottom: 1.5rem;
 }
 
 .contact__container {
@@ -275,6 +275,10 @@
 
 /* Large devices */
 @media screen and (min-width: 1150px){
+  .contact {
+    padding-block: 3rem 10rem;
+  }
+
   .contact__container{
     grid-template-columns: 440px 670px;
     grid-template-rows: initial;
