@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/Projects.css';
 
 const Projects = () => {
@@ -44,7 +43,7 @@ const Projects = () => {
       description: "A modern, interactive resume builder built with React that allows users to create professional resumes with real-time preview.",
       skills: ["React", "JavaScript", "CSS3", "HTML5"],
       githubLink: "https://github.com/daniyxlkhan/resume-builder",
-      livelink: "https://resume-builder-mocha-two.vercel.app/"
+      liveLink: "https://resume-builder-mocha-two.vercel.app/"
     },
   ];
 

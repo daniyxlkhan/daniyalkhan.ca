@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/About.css';
 import PhotoCarousel from './PhotoCarousel';
 

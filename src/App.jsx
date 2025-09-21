@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 import Header from './components/Header.jsx';
 import Home from './components/Home.jsx';
