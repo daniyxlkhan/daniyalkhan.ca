@@ -5,7 +5,9 @@
 
 .footer__container{
   padding-block: 3rem 2rem;
-  row-gap: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__links{
@@ -32,18 +34,16 @@
 .footer__copy a{
   color: var(--white-color);
   font-weight: var(--font-medium);
+  transition: color .3s;
+}
+
+.footer__copy a:hover{
+  color: var(--first-color);
 }
 
 /* Large devices */
 @media screen and (min-width: 1150px){
   .footer__container{
     padding-block: 4rem;
-    grid-template-columns: repeat(2, max-content);
-    justify-content: space-between;
-  }
-
-  .footer__links{
-    column-gap: 3rem;
-    order: 1;
   }
 }

@@ -8,22 +8,9 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="footer__container container grid">
-        <ul className="footer__links">
-          <li>
-            <a href="#home" className="footer__link" onClick={(e) => handleLinkClick('home', e)}>Home</a>
-          </li>
-          <li>
-            <a href="#projects" className="footer__link" onClick={(e) => handleLinkClick('projects', e)}>Projects</a>
-          </li>
-          <li>
-            <a href="#contact" className="footer__link" onClick={(e) => handleLinkClick('contact', e)}>Contact</a>
-          </li>
-        </ul>
-
+      <div className="footer__container container">
         <span className="footer__copy">
-          &#169;
-          <a href="#home" onClick={(e) => handleLinkClick('home', e)}>Daniyal Khan</a>
+          <a href="#home" onClick={(e) => handleLinkClick('home', e)}>Built with ❤️ by Daniyal Khan </a>&#169; 2025
         </span>
       </div>
     </footer>
