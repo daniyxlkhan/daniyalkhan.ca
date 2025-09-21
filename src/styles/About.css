@@ -2,7 +2,7 @@
 .about {
   background-color: var(--container-color);
   transition: background-color 0.4s;
-  padding-block: 2rem 4rem;
+  padding-block: 4rem 4rem; /* Add top padding for proper separation */
 }
 
 .about__container {

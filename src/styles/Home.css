@@ -1,6 +1,20 @@
 /* HOME */
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
 .home__container{
-  padding-top: 7rem;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--header-height));
+  text-align: center;
 }
 
 .home__name{
@@ -13,11 +27,30 @@
   min-height: 1em; 
   opacity: 0;
   animation: fadeInFont 0.3s ease-in-out 0.5s forwards;
+  margin-bottom: 2rem;
+  white-space: nowrap; 
+  overflow: visible;
 }
 
 @keyframes fadeInFont {
   to {
     opacity: 1;
+  }
+}
+
+.typing-cursor {
+  color: var(--first-color);
+  animation: blink 1s infinite;
+  font-weight: normal;
+  font-family: var(--display-font);
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
   }
 }
 
@@ -47,14 +80,35 @@
 }
 
 .home__info{
-  margin-top: 4rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-50px); /* Start position off to the left */
+  transition: all 0.6s ease-out; /* Reduced from 0.8s to 0.6s */
+}
+
+.home__info.show-info {
+  opacity: 1;
+  transform: translateX(0); /* Slide to final position */
 }
 
 .home__description{
   text-align: center;
   color: var(--title-color);
-  margin-bottom: 1.5rem;
-  margin-top: -2rem;
+  margin-bottom: 2rem;
+  margin-top: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.4s ease-out 0.1s; /* Reduced delay from 0.2s to 0.1s */
+}
+
+.show-info .home__description {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .home__description b {
@@ -70,6 +124,15 @@
   display: block;
   width: max-content;
   margin: 0 auto;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease-out 0.3s; /* Reduced delay from 0.5s to 0.3s */
+}
+
+.show-info .home__scroll {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .home__scroll-text{
@@ -111,6 +174,10 @@
 
 /* Medium devices */
 @media screen and (min-width: 576px) {
+  .home__name{
+    font-size: 3.8rem; /* Slightly smaller to fit better */
+  }
+
   .home__container{
     grid-template-columns: 350px;
     justify-content: center;
@@ -118,6 +185,11 @@
 }
 
 @media screen and (min-width: 768px) {
+  .home__name{
+    font-size: 4.2rem; /* Adjusted for better fit */
+    white-space: nowrap;
+  }
+  
   .home__social-link{
     font-size: 2rem;
     padding: 12px;
@@ -129,25 +201,29 @@
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .home__name{
+    font-size: 4.8rem; /* Gradual increase */
+  }
+}
+
 /* Large devices */
 @media screen and (min-width: 1150px){
   .home__name{
-    font-size: calc(var(--biggest-font-size) * 1.2);
+    font-size: 5.5rem; /* Reduced from calc() to fixed size */
     letter-spacing: 3px;
-    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+    white-space: nowrap;
   }
   
   .home__description{
+    font-size: var(--h3-font-size);
     text-align: center;
-  }
-
-  .home__name{
-    align-self: flex-end;
   }
 
   .home__info{
     margin-top: 2rem;
-    align-self: flex-start;
+    align-items: center;
   }
 
   .home__scroll-box{
@@ -167,5 +243,11 @@
   .home__social {
     left: 2rem; 
     top: 116%; 
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .home__name{
+    font-size: 6rem; /* Larger screens can handle bigger text */
   }
 }
