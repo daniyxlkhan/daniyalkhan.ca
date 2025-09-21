@@ -15,6 +15,8 @@
   justify-content: center;
   min-height: calc(100vh - var(--header-height));
   text-align: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 .home__name{
@@ -27,9 +29,10 @@
   min-height: 1em; 
   opacity: 0;
   animation: fadeInFont 0.3s ease-in-out 0.5s forwards;
-  margin-bottom: 2rem;
-  white-space: nowrap; 
+  margin-bottom: 1.5rem;
   overflow: visible;
+  line-height: 1.1;
+  width: 100%;
 }
 
 @keyframes fadeInFont {
@@ -80,19 +83,20 @@
 }
 
 .home__info{
-  margin-top: 2rem;
+  margin-top: 1.5rem; 
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  opacity: 0; /* Initially hidden */
-  transform: translateX(-50px); /* Start position off to the left */
-  transition: all 0.6s ease-out; /* Reduced from 0.8s to 0.6s */
+  width: 100%;
+  opacity: 0;
+  transform: translateY(30px); 
+  transition: all 0.6s ease-out;
 }
 
 .home__info.show-info {
   opacity: 1;
-  transform: translateX(0); /* Slide to final position */
+  transform: translateY(0); 
 }
 
 .home__description{
@@ -101,14 +105,17 @@
   margin-bottom: 2rem;
   margin-top: 0;
   width: 100%;
+  max-width: 600px; 
+  margin-left: auto;
+  margin-right: auto;
   opacity: 0;
-  transform: translateX(-30px);
-  transition: all 0.4s ease-out 0.1s; /* Reduced delay from 0.2s to 0.1s */
+  transform: translateY(20px);
+  transition: all 0.4s ease-out 0.1s;
 }
 
 .show-info .home__description {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .home__description b {
@@ -121,13 +128,14 @@
 }
 
 .home__scroll{
-  display: block;
+  display: flex;
   width: max-content;
   margin: 0 auto;
   text-align: center;
+  align-self: center;
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.4s ease-out 0.3s; /* Reduced delay from 0.5s to 0.3s */
+  transition: all 0.4s ease-out 0.3s;
 }
 
 .show-info .home__scroll {
@@ -175,18 +183,23 @@
 /* Medium devices */
 @media screen and (min-width: 576px) {
   .home__name{
-    font-size: 3.8rem; /* Slightly smaller to fit better */
+    font-size: 3.2rem;
+    white-space: nowrap;
   }
 
   .home__container{
-    grid-template-columns: 350px;
-    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .home__description {
+    text-align: center;
   }
 }
 
 @media screen and (min-width: 768px) {
   .home__name{
-    font-size: 4.2rem; /* Adjusted for better fit */
+    font-size: 3.8rem;
     white-space: nowrap;
   }
   
@@ -203,14 +216,14 @@
 
 @media screen and (min-width: 1024px) {
   .home__name{
-    font-size: 4.8rem; /* Gradual increase */
+    font-size: 4.5rem;
   }
 }
 
 /* Large devices */
 @media screen and (min-width: 1150px){
   .home__name{
-    font-size: 5.5rem; /* Reduced from calc() to fixed size */
+    font-size: 5.2rem;
     letter-spacing: 3px;
     margin-bottom: 3rem;
     white-space: nowrap;
@@ -224,6 +237,7 @@
   .home__info{
     margin-top: 2rem;
     align-items: center;
+    text-align: center;
   }
 
   .home__scroll-box{
@@ -248,6 +262,69 @@
 
 @media screen and (min-width: 1400px) {
   .home__name{
-    font-size: 6rem; /* Larger screens can handle bigger text */
+    font-size: 6rem;
+  }
+}
+
+/* Mobile-specific fixes */
+@media screen and (max-width: 575px) {
+  .home__name{
+    font-size: 3.2rem; 
+    padding: 0 1rem;
+    line-height: 1.1; 
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .home__container {
+    padding: 0 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .home__info {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem; 
+  }
+  
+  .home__description {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 2rem auto;
+    padding: 0;
+  }
+  
+  .home__scroll {
+    margin: 0 auto;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Extra small mobile devices */
+@media screen and (max-width: 400px) {
+  .home__name{
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 0.8rem;
+  }
+  
+  .home__info {
+    margin-top: 0.8rem; 
+  }
+  
+  .home__description {
+    font-size: var(--normal-font-size);
+    text-align: center;
+  }
+  
+  .home__container {
+    align-items: center;
+    text-align: center;
   }
 }
