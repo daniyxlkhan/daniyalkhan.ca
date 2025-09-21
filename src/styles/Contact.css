@@ -278,7 +278,6 @@
   .contact__container{
     grid-template-columns: 440px 670px;
     grid-template-rows: initial;
-    padding-bottom: 2rem;
   }
 
   .contact__mail{

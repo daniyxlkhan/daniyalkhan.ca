@@ -12,7 +12,7 @@ const About = () => {
     <section className="about section" id="about">
       <div className="about__container container">
         <h2 className="section__title-1">
-          <span>About me.</span> 
+          <span>About me.</span>
         </h2>
 
         <div className="about__perfil">
@@ -49,7 +49,7 @@ const About = () => {
           </div>
         </div>
         
-        <PhotoCarousel />
+        <PhotoCarousel/>
       </div>
     </section>
   );
