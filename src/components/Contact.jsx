@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Contact.css';
 
 const Contact = () => {
@@ -9,6 +9,17 @@ const Contact = () => {
     user_message: ''
   });
   const [message, setMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const SERVICE_ID = 'service_yqveszw'; 
+  const TEMPLATE_ID = 'template_a2hm0ca'; 
+  const PUBLIC_KEY = 'Cf3ywRrQehouSxS7z'; 
+
+  useEffect(() => {
+    if (window.emailjs) {
+      window.emailjs.init(PUBLIC_KEY);
+    }
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -17,34 +28,43 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // EmailJS integration - replace with your service details
-    if (window.emailjs) {
-      window.emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', '#contact-form', 'YOUR_USER_ID')
-        .then(() => {
-          setMessage('Message sent successfully ✅');
-          setTimeout(() => setMessage(''), 5000);
-          setFormData({
-            user_name: '',
-            user_email: '',
-            user_subject: '',
-            user_message: ''
-          });
-        })
-        .catch(() => {
-          setMessage('Message not sent ❌');
-        });
-    } else {
-      console.log('Form submitted:', formData);
-      setMessage('Message sent successfully!');
+    setIsLoading(true);
+    setMessage('');
+
+    try {
+      if (!window.emailjs) {
+        throw new Error('EmailJS is not loaded. Please refresh the page.');
+      }
+
+      const result = await window.emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          user_name: formData.user_name,
+          user_email: formData.user_email,
+          user_subject: formData.user_subject,
+          user_message: formData.user_message,
+          to_name: 'Daniyal',
+          from_name: formData.user_name,
+          reply_to: formData.user_email
+        }
+      );
+
+      setMessage('Message sent successfully! ✅');
       setFormData({
         user_name: '',
         user_email: '',
         user_subject: '',
         user_message: ''
       });
+
+    } catch (error) {
+      setMessage('Failed to send message. Please try again. ❌');
+    } finally {
+      setIsLoading(false);
+      setTimeout(() => setMessage(''), 5000);
     }
   };
 
@@ -71,7 +91,7 @@ const Contact = () => {
           <h2 className="contact__title">
             Send Me A Message
           </h2>
-          <form className="contact__form" id="contact-form" onSubmit={handleSubmit}>
+          <form className="contact__form" onSubmit={handleSubmit}>
             <div className="contact__group">
               <div className="contact__box">
                 <input 
@@ -83,6 +103,7 @@ const Contact = () => {
                   placeholder="First Name"
                   value={formData.user_name}
                   onChange={handleChange}
+                  disabled={isLoading}
                 />
                 <label htmlFor="name" className="contact__label">First Name</label>
               </div>
@@ -97,6 +118,7 @@ const Contact = () => {
                   placeholder="Email Address"
                   value={formData.user_email}
                   onChange={handleChange}
+                  disabled={isLoading}
                 />
                 <label htmlFor="email" className="contact__label">Email Address</label>
               </div>
@@ -111,6 +133,7 @@ const Contact = () => {
                   placeholder="Subject"
                   value={formData.user_subject}
                   onChange={handleChange}
+                  disabled={isLoading}
                 />
                 <label htmlFor="subject" className="contact__label">Subject</label>
               </div>
@@ -124,16 +147,18 @@ const Contact = () => {
                   placeholder="Message"
                   value={formData.user_message}
                   onChange={handleChange}
+                  disabled={isLoading}
                 ></textarea>
                 <label htmlFor="message" className="contact__label">Message</label>
               </div>
               
-              <p className="contact__message" id="contact-message">
+              <p className="contact__message">
                 {message}
               </p>
 
-              <button type="submit" className="contact__button button">
-                <i className="ri-send-plane-line"></i> Send Message
+              <button type="submit" className="contact__button button" disabled={isLoading}>
+                <i className="ri-send-plane-line"></i> 
+                {isLoading ? 'Sending...' : 'Send Message'}
               </button>
             </div>
           </form>
@@ -161,6 +186,10 @@ const Contact = () => {
 
             <a href="https://www.linkedin.com/in/daniyxl-khan" target="_blank" rel="noopener noreferrer" className="contact__social-link">
               <i className="ri-linkedin-box-line"></i>
+            </a>
+
+            <a href="https://www.instagram.com/dantheman.explores/" target="_blank" rel="noopener noreferrer" className="contact__social-link">
+              <i className="ri-instagram-line"></i>
             </a>
 
             <a href="https://twitter.com/daniyxl_khan" target="_blank" rel="noopener noreferrer" className="contact__social-link">

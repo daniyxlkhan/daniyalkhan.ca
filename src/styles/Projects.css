@@ -2,10 +2,16 @@
 .projects{
   background-color: var(--body-color);
   transition: background-color .4s;
+  padding-block: 4rem 4rem;
 }
 
 .projects__container{
   row-gap: 2rem;
+}
+
+/* Make the title bigger on mobile */
+.projects .section__title-1 {
+  font-size: calc(var(--h1-font-size) * 1.2); 
 }
 
 .projects__card{
@@ -23,6 +29,9 @@
   right: 1rem;
   bottom: -1.5rem;
   padding: 1rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
 }
 
 .projects__content{
@@ -91,6 +100,12 @@
     grid-template-columns: 350px;
     justify-content: center;
   }
+  
+  .projects__button{
+    width: 52px;
+    height: 52px;
+    padding: 1.2rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -101,6 +116,10 @@
 
 /* Large devices */
 @media screen and (min-width: 1150px){
+  .projects {
+    padding-block: 4rem 6rem;
+  }
+
   .projects__container{
     grid-template-columns: repeat(3, 352px);
     padding-block: 3rem 1rem;
@@ -120,5 +139,8 @@
 
   .projects__button{
     right: 1.25rem;
+    width: 56px;
+    height: 56px;
+    padding: 1.4rem;
   }
 }
