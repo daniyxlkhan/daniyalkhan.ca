@@ -152,15 +152,30 @@
   .about__buttons {
     justify-content: center;
     margin-top: 0.5rem;
-    flex-direction: column;
-    gap: 0.8rem;
+    flex-direction: row; /* Changed back to row for side by side */
+    gap: 1rem; /* Increased gap between buttons */
     align-items: center;
   }
   
-  .button, .button__ghost {
-    width: 100%;
-    max-width: 200px;
+  .button {
+    flex: 1; /* Take up available space */
+    max-width: 180px; /* Limit width but keep rectangular */
     justify-content: center;
+    padding: 1rem 1.5rem;
+  }
+  
+  .button__ghost {
+    width: 56px; /* Fixed square width */
+    height: 56px; /* Fixed square height */
+    padding: 0; /* Remove padding to maintain square */
+    flex: none; /* Don't grow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button__ghost i {
+    font-size: 1.5rem; /* Larger icon for better visibility */
   }
 }
 
