@@ -178,7 +178,7 @@
 .contact__social-links{
   display: flex;
   justify-content: center;
-  column-gap: .75rem;
+  column-gap: .5rem; /* Reduced gap to fit 4 buttons better */
 }
 
 .contact__social-link{
@@ -343,5 +343,9 @@
 
   .contact__message{
     bottom: -2.5rem;
+  }
+
+  .contact__social-links{
+    column-gap: .75rem; /* Restore larger gap on desktop */
   }
 }

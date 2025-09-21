@@ -37,6 +37,10 @@ const About = () => {
               <a href="https://www.linkedin.com/in/daniyxl-khan" target="_blank" rel="noopener noreferrer" className="button__ghost">
                 <i className="ri-linkedin-box-line"></i>
               </a>
+
+              <a href="https://www.instagram.com/dantheman.explores/" target="_blank" rel="noopener noreferrer" className="button__ghost">
+                <i className="ri-instagram-line"></i>
+              </a>
             </div>
           </div>
 
