@@ -14,15 +14,14 @@ const Home = () => {
       const timeout = setTimeout(() => {
         setDisplayText(prev => prev + fullText[currentIndex]);
         setCurrentIndex(prev => prev + 1);
-      }, 100); // Typing speed 
+      }, 100);
 
       return () => clearTimeout(timeout);
     } else if (currentIndex === fullText.length) {
       setIsTyping(false);
-      // Trigger the info animations faster after typing is complete
       setTimeout(() => {
         setShowInfo(true);
-      }, 200); // Reduced from 500ms to 200ms
+      }, 200);
     }
   }, [currentIndex, isTyping, fullText]);
 
