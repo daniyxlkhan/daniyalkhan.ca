@@ -23,7 +23,7 @@ const Projects = () => {
       id: 3,
       image: "/assets/img/speedtest50.jpeg",
       title: "Speedtest50",
-      description: "Speedtest50 allows you to effortlessly measure your network speed and monitor your network's performance over time. By logging in, you unlock the ability to track and your network's speed, ensuring you always stay connected at optimal speeds.",
+      description: "Speedtest50 allows you to effortlessly measure your network speed and monitor your network's performance over time.",
       skills: ["Flask", "Python", "SQLite", "HTML", "CSS", "Javascript"],
       githubLink: "https://github.com/Javantax/speedtest50",
     },
