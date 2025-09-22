@@ -6,7 +6,7 @@ const Projects = () => {
       id: 1,
       image: "/assets/img/minilinkify.png",
       title: "Minilinkify URL Shortener", 
-      description: "This program allows you to apply different image processing filters to BMP images. It serves as a tool for performing basic image manipulation tasks.",
+      description: "A simple URL shortener that converts long URLs into short codes, tracks usage stats, and handles validation and redirection. Dockerized and deployed on AWS EC2.",
       skills: ["Spring Boot", "Java", "PostgreSQL", "Docker", "AWS EC2"],
       githubLink: "https://github.com/daniyxlkhan/minilinkify-url-api",
       liveLink: "https://minilinkify.tech/"
@@ -44,6 +44,14 @@ const Projects = () => {
       skills: ["React", "JavaScript", "CSS3", "HTML5"],
       githubLink: "https://github.com/daniyxlkhan/resume-builder",
       liveLink: "https://resume-builder-mocha-two.vercel.app/"
+    },
+    {
+      id: 6,
+      image: "/assets/img/flappybird.png",
+      title: "Flappy bird",
+      description: "A Java implementation of the classic Flappy Bird game using Swing GUI framework.",
+      skills: ["Java", "Swing", "2D Graphics Programming", "AWT (Abstract Window Toolkit)"],
+      githubLink: "https://github.com/daniyxlkhan/flappyBird",
     },
   ];
 
