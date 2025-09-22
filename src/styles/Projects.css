@@ -50,6 +50,13 @@
   color: var(--title-color);
 }
 
+/* Mobile-specific title spacing */
+@media screen and (max-width: 575px) {
+  .projects__title{
+    margin-bottom: 1.2rem;
+  }
+}
+
 .projects__description{
   color: var(--text-color);
   line-height: 1.6;
@@ -93,7 +100,7 @@
   column-gap: 1rem;
   flex-wrap: wrap;
   row-gap: 0.5rem;
-  margin-top: auto; /* Push buttons to bottom of card */
+  margin-top: auto;
 }
 
 .projects__link{
