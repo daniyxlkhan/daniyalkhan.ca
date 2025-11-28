@@ -4,6 +4,22 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      image: "/assets/img/zenfeed_logo.png",
+      title: "ZenFeed (WIP)",
+      description: "A browser extension that helps you stay focused by hiding short-form content like YouTube Shorts, Instagram Reels, and Facebook Reels. Currently its a work in progress, but its coming out soon!",
+      skills: ["JavaScript", "Web Extensions", "Chrome API", "CSS", "Manifest.json"],
+      githubLink: "https://github.com/daniyxlkhan/ZenFeed-web-extension",
+    },
+    {
+      id: 2,
+      image: "/assets/img/nhl_logo.png",
+      title: "NHL Match Predictor",
+      description: "A machine learning model using Random Forest Classification to predict NHL game outcomes. Integrates NHL API for real-time data, processes JSON with Pandas, and automates daily predictions.",
+      skills: ["Python", "Scikit-learn", "Pandas", "Machine Learning"],
+      githubLink: "https://github.com/daniyxlkhan/nhl_match_predictor",
+    },
+    {
+      id: 3,
       image: "/assets/img/minilinkify.png",
       title: "Minilinkify URL Shortener", 
       description: "A simple URL shortener that converts long URLs into short codes, tracks usage stats, and handles validation and redirection. Dockerized and deployed on AWS EC2.",
@@ -12,7 +28,7 @@ const Projects = () => {
       liveLink: "https://minilinkify.tech/"
     },
     {
-      id: 2,
+      id: 4,
       image: "/assets/img/FilterC.jpeg",
       title: "Edge Detection in C", 
       description: "This program allows you to apply different image processing filters to BMP images. It serves as a tool for performing basic image manipulation tasks.",
@@ -20,7 +36,7 @@ const Projects = () => {
       githubLink: "https://github.com/daniyxlkhan/Edge-Detection-and-Filters"
     },
     {
-      id: 3,
+      id: 5,
       image: "/assets/img/speedtest50.jpeg",
       title: "Speedtest50",
       description: "Speedtest50 allows you to effortlessly measure your network speed and monitor your network's performance over time.",
@@ -28,7 +44,7 @@ const Projects = () => {
       githubLink: "https://github.com/Javantax/speedtest50",
     },
     {
-      id: 4,
+      id: 6,
       image: "/assets/img/dragonball-game.png",
       title: "Dragon Ball Memory Game",
       description: "A memory card game built with React featuring Dragon Ball characters. Test your memory by clicking on different characters without repeating any.",
@@ -37,7 +53,7 @@ const Projects = () => {
       liveLink: "https://dragonball-memory-card-game.vercel.app/" 
     },
     {
-      id: 5,
+      id: 7,
       image: "/assets/img/resume-builder.png",
       title: "Resume Builder",
       description: "A modern, interactive resume builder built with React that allows users to create professional resumes with real-time preview.",
@@ -46,13 +62,14 @@ const Projects = () => {
       liveLink: "https://resume-builder-mocha-two.vercel.app/"
     },
     {
-      id: 6,
+      id: 8,
       image: "/assets/img/flappybird.png",
       title: "Flappy bird",
       description: "A Java implementation of the classic Flappy Bird game using Swing GUI framework.",
       skills: ["Java", "Swing", "2D Graphics Programming", "AWT (Abstract Window Toolkit)"],
       githubLink: "https://github.com/daniyxlkhan/flappyBird",
     },
+
   ];
 
   return (
