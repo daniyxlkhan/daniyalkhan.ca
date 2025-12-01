@@ -6,6 +6,7 @@ const PhotoCarousel = () => {
     '/assets/img/me-quebec-city.jpeg',
     '/assets/img/me-with-jack.JPEG',
     '/assets/img/me-in-snow.JPG',
+    '/assets/img/me-with-Susan-Holt.png',
     '/assets/img/me-lbr.JPG',
     '/assets/img/me-with-emily.jpeg',
     '/assets/img/me-with-bunthong.jpeg',
@@ -21,6 +22,14 @@ const PhotoCarousel = () => {
     '/assets/img/me-in-quebec.jpg',
   ];
 
+  const handleContextMenu = (e) => {
+    e.preventDefault(); // Prevent right-click menu
+  };
+
+  const handleDragStart = (e) => {
+    e.preventDefault(); // Prevent dragging
+  };
+
   return (
     <div className="photo-carousel">
       <div className="photo-carousel__container">
@@ -32,6 +41,9 @@ const PhotoCarousel = () => {
               alt={`Photo ${index + 1}`}
               className="photo-carousel__image"
               loading="lazy"
+              onContextMenu={handleContextMenu}
+              onDragStart={handleDragStart}
+              draggable="false"
             />
           </div>
         ))}
@@ -42,6 +54,9 @@ const PhotoCarousel = () => {
               alt={`Photo ${index + 1}`}
               className="photo-carousel__image"
               loading="lazy"
+              onContextMenu={handleContextMenu}
+              onDragStart={handleDragStart}
+              draggable="false"
             />
           </div>
         ))}
