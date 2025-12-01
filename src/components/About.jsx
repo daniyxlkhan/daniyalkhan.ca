@@ -7,6 +7,14 @@ const About = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleContextMenu = (e) => {
+    e.preventDefault();
+  };
+
+  const handleDragStart = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <section className="about section" id="about">
       <div className="about__container container">
@@ -44,7 +52,14 @@ const About = () => {
           </div>
 
           <div className="about__image-container">
-            <img src="/assets/img/me-in-center-canada.jpg" alt="image" className="about__img" />
+            <img 
+              src="/assets/img/me-in-center-canada.jpg" 
+              alt="image" 
+              className="about__img"
+              onContextMenu={handleContextMenu}
+              onDragStart={handleDragStart}
+              draggable="false"
+            />
             <div className="about__shadow"></div>
             <div className="geometric-box"></div>
             <img src="/assets/img/random-lines.svg" alt="" className="about__line" />
