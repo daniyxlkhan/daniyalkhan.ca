@@ -5,10 +5,11 @@ const Projects = () => {
     {
       id: 1,
       image: "/assets/img/zenfeed_logo.png",
-      title: "ZenFeed (WIP)",
-      description: "A browser extension that helps you stay focused by hiding short-form content like YouTube Shorts, Instagram Reels, and Facebook Reels. Currently its a work in progress, but its coming out soon!",
+      title: "ZenFeed",
+      description: "A browser extension that helps you stay focused by hiding short-form content like YouTube Shorts, Instagram Reels, and Facebook Reels. Available on Chromium based browsers and FireFox.",
       skills: ["JavaScript", "Web Extensions", "Chrome API", "CSS", "Manifest.json"],
-      githubLink: "https://github.com/daniyxlkhan/ZenFeed-web-extension",
+      githubLink: "https://github.com/daniyxlkhan/ZenFeed-extension",
+      liveLink: "https://chromewebstore.google.com/detail/zenfeed-hide-shorts-reels/cpamdbkgjacecpfcmcclkaefpfnekoal?authuser=0&hl=en-US"
     },
     {
       id: 2,
