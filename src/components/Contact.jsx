@@ -188,7 +188,7 @@ const Contact = () => {
               <i className="ri-linkedin-box-line"></i>
             </a>
 
-            <a href="https://www.instagram.com/dantheman.explores/" target="_blank" rel="noopener noreferrer" className="contact__social-link">
+            <a href="https://www.instagram.com/daniyxl.explores/" target="_blank" rel="noopener noreferrer" className="contact__social-link">
               <i className="ri-instagram-line"></i>
             </a>
 
