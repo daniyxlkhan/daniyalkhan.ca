@@ -26,7 +26,6 @@ const Projects = () => {
       description: "A simple URL shortener that converts long URLs into short codes, tracks usage stats, and handles validation and redirection. Dockerized and deployed on AWS EC2.",
       skills: ["Spring Boot", "Java", "PostgreSQL", "Docker", "AWS EC2"],
       githubLink: "https://github.com/daniyxlkhan/minilinkify-url-api",
-      liveLink: "https://minilinkify.tech/"
     },
     {
       id: 4,
