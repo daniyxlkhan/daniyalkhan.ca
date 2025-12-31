@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__container container">
         <span className="footer__copy">
-          <a href="#home" onClick={(e) => handleLinkClick('home', e)}>Built with ❤️ by Daniyal Khan </a>&#169; 2025
+          <a href="#home" onClick={(e) => handleLinkClick('home', e)}>Built with ❤️ by Daniyal Khan </a>&#169; 2026
         </span>
       </div>
     </footer>
