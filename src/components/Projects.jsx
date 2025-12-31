@@ -14,8 +14,8 @@ const Projects = () => {
     {
       id: 2,
       image: "/assets/img/nhl_logo.png",
-      title: "NHL Match Predictor",
-      description: "A machine learning model using Random Forest Classification to predict NHL game outcomes. Integrates NHL API for real-time data, processes JSON with Pandas, and automates daily predictions.",
+      title: "NHL Game Predictor",
+      description: "Random Forest classifier predicting NHL game winners using 8 engineered features. Trained on 1,300+ games. Integrates NHL API to automate daily predictions with win probabilities.",
       skills: ["Python", "Scikit-learn", "Pandas", "Machine Learning"],
       githubLink: "https://github.com/daniyxlkhan/nhl_match_predictor",
     },
