@@ -20,6 +20,14 @@ const Projects = () => {
       githubLink: "https://github.com/daniyxlkhan/nhl_game_predictor",
     },
     {
+      id: 6,
+      image: "/assets/img/spotlight.png",
+      title: "Spotlight",
+      description: "A gig marketplace app that connects verified post-secondary students with people who need help on small jobs. Handles booking, in-app chat, and payments with payouts to students. Live on the App Store.",
+      skills: ["React Native", "Expo", "Spring Boot", "PostgreSQL", "Stripe", "Supabase"],
+      liveLink: "https://apps.apple.com/ca/app/spotlight-hire-or-hustle/id6777232092"
+    },
+    {
       id: 3,
       image: "/assets/img/minilinkify.png",
       title: "Minilinkify URL Shortener", 
@@ -42,24 +50,6 @@ const Projects = () => {
       description: "Speedtest50 allows you to effortlessly measure your network speed and monitor your network's performance over time.",
       skills: ["Flask", "Python", "SQLite", "HTML", "CSS", "Javascript"],
       githubLink: "https://github.com/Javantax/speedtest50",
-    },
-    {
-      id: 6,
-      image: "/assets/img/dragonball-game.png",
-      title: "Dragon Ball Memory Game",
-      description: "A memory card game built with React featuring Dragon Ball characters. Test your memory by clicking on different characters without repeating any.",
-      skills: ["React", "CSS3", "HTML5"],
-      githubLink: "https://github.com/daniyxlkhan/dragonball-memory-card-game",
-      liveLink: "https://dragonball-memory-card-game.vercel.app/" 
-    },
-    {
-      id: 7,
-      image: "/assets/img/resume-builder.png",
-      title: "Resume Builder",
-      description: "A modern, interactive resume builder built with React that allows users to create professional resumes with real-time preview.",
-      skills: ["React", "JavaScript", "CSS3", "HTML5"],
-      githubLink: "https://github.com/daniyxlkhan/resume-builder",
-      liveLink: "https://resume-builder-mocha-two.vercel.app/"
     },
     {
       id: 8,
@@ -100,10 +90,12 @@ const Projects = () => {
             </div>
 
             <div className="projects__buttons">
-              <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="projects__link">
-                <i className="ri-github-line"></i> Code
-              </a>
-              
+              {project.githubLink && (
+                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="projects__link">
+                  <i className="ri-github-line"></i> Code
+                </a>
+              )}
+
               {project.liveLink && (
                 <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="projects__link">
                   <i className="ri-external-link-line"></i> Demo
