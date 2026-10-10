@@ -326,3 +326,26 @@
     text-align: center;
   }
 }
+
+/* Cycling "I like to ___." */
+.home__activity-cursor{
+  color: var(--first-color);
+  animation: blink 1s infinite;
+  font-weight: normal;
+}
+
+/* "Now" line */
+.home__now{
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease-out 0.2s;
+}
+
+.show-info .home__now{
+  opacity: 1;
+  transform: translateY(0);
+}
