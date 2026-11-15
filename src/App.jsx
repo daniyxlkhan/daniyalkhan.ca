@@ -20,8 +20,8 @@ function App() {
       reset: false
     });
 
-    sr.reveal('.home__info, .contact__mail', {origin: 'right'});
-    sr.reveal('.home__name, .contact__social, .contact__data', {origin: 'left'});
+    sr.reveal('.home__info', {origin: 'right'});
+    sr.reveal('.home__name, .contact__social', {origin: 'left'});
     sr.reveal('.about__container, .section__title-1, .about__info', {origin: 'left'});
     sr.reveal('.projects__card', {interval: 70});
   }, []);
