@@ -1,5 +1,4 @@
 import '../styles/About.css';
-import PhotoCarousel from './PhotoCarousel';
 
 const About = () => {
   const handleContactClick = (e) => {
@@ -66,8 +65,6 @@ const About = () => {
             <div className="about__box"></div>
           </div>
         </div>
-        
-        <PhotoCarousel/>
       </div>
     </section>
   );
